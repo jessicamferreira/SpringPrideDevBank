@@ -1,0 +1,8 @@
+spring:
+    datasource:
+        username: jel
+        password: secret
+        url: jdbc:mysql://pridedevdatabase.c3lbe0bvk2jp.us-east-1.rds.amazonaws.com/jel
+    jpa:
+        hibernate:
+            ddl-auto: update
