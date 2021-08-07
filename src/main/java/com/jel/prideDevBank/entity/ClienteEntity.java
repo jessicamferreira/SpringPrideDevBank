@@ -7,23 +7,31 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
+
+import org.springframework.stereotype.Component;
 
 @Entity
-@Table(name="tabela_cliente")
+@Component
+@Table(name="tabela_cliente", uniqueConstraints = @UniqueConstraint(columnNames = {"cpf"}))
 public class ClienteEntity implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int id;
+	private Integer id;
 	private String nome;
 	private String cpf;
 	private String nomeSocial;
 	
 	
-	public int getId() {
+
+	public Integer getId() {
 		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
 	}
 	public String getNome() {
 		return nome;

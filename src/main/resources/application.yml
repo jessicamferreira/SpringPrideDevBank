@@ -4,5 +4,6 @@ spring:
         password: secret
         url: jdbc:mysql://pridedevdatabase.c3lbe0bvk2jp.us-east-1.rds.amazonaws.com/jel
     jpa:
+        show-sql: true
         hibernate:
             ddl-auto: update
